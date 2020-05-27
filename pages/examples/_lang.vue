@@ -151,7 +151,7 @@ export default {
   },
   computed: {
     lang () {
-      return this.$route.params.lang || 'fr'
+      return this.$route.query.lang || 'fr'
     }
   },
   async mounted () {
@@ -162,7 +162,7 @@ export default {
       this.fetchState = true
       const data = await this.$axios
         .$get(
-          'https://v2-api.sheety.co/612035a23ef10236acde20367e8a78e8/ghfrLandingPage/feuille1'
+          'https://v2-api.sheety.co/612035a23ef10236acde20367e8a78e8/ghfr/feuille1'
         )
         .then(data => data.feuille1)
         .catch(err => err)
