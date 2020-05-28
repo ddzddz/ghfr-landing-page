@@ -69,8 +69,8 @@ export default {
     routes () {
       return axios.get('https://v2-api.sheety.co/612035a23ef10236acde20367e8a78e8/ghfr/feuille1')
         .then((res) => {
-          return res.data.feuille1.map((content) => {
-            return '/' + content.lang
+          return res.data.feuille1.map((row) => {
+            return '/' + row.id
           })
         })
         .catch(err => err)
