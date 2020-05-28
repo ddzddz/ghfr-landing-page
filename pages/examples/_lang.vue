@@ -151,7 +151,7 @@ export default {
   },
   computed: {
     lang () {
-      return this.$route.query.lang || 'fr'
+      return this.$route.params.lang || 'fr'
     }
   },
   async mounted () {
