@@ -78,7 +78,6 @@
           Build high performing teams, establish design practices, mentor and grow the next generation of great designers, and design interfaces and experiences.
         </p>
         <div class="max-w-sm mt-4 sm:flex">
-          <label for="email">Email</label>
           <input
             id="email"
             type="email"
