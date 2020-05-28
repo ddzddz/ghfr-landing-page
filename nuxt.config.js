@@ -1,3 +1,4 @@
+import axios from 'axios'
 
 export default {
   mode: 'universal',
@@ -65,6 +66,14 @@ export default {
     }
   },
   generate: {
-    routes: ['/fr', '/pt', '/es']
+    routes () {
+      return axios.get('https://v2-api.sheety.co/612035a23ef10236acde20367e8a78e8/ghfr/feuille1')
+        .then((res) => {
+          return res.data.feuille1.map((content) => {
+            return '/' + content.lang
+          })
+        })
+        .catch(err => err)
+    }
   }
 }

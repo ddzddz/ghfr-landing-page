@@ -100,20 +100,24 @@
 
 <script>
 export default {
-  async asyncData (ctx) {
-    const data = await ctx.$axios
+  async asyncData ({ $axios, route }) {
+    const lang = route.params.lang
+    const data = await $axios
       .$get(
         'https://v2-api.sheety.co/612035a23ef10236acde20367e8a78e8/ghfr/feuille1'
       )
       .then(data => data.feuille1)
       .catch(err => err)
-    const content = data.filter(el => el.lang === ctx.route.params.lang)[0]
-    return { content }
+    const content = data.filter(el => el.lang === lang)[0]
+    return { content, lang }
   },
-  data () {
+  head () {
     return {
-      content: {}
+      htmlAttrs: {
+        lang: this.lang
+      }
     }
   }
+
 }
 </script>
