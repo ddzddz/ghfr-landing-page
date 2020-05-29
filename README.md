@@ -1,6 +1,6 @@
 # ghfr-landing-page
 
-> My grand Nuxt.js project
+> Générateur de landing pages
 
 ## Build Setup
 
