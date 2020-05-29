@@ -2,9 +2,7 @@
 
 > Générateur de landing pages
 
-Article sur Growth Hacking France.
-
-
+Article sur [Growth Hacking France](https://www.growthhacking.fr/t/tuto-generateur-de-landing-page/20724).
 
 ## Build Setup
 
