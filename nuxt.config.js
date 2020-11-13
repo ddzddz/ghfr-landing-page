@@ -70,7 +70,7 @@ export default {
       return axios.get('https://api.sheety.co/8c471a8f63745133ae67fc6920e353c5/ghfrLandingPage/sheet1')
         .then((res) => {
           return res.data.sheet1.map((row) => {
-            return '/' + row.ide
+            return '/' + row.id
           })
         })
         .catch(err => err)
