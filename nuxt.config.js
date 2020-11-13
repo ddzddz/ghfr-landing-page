@@ -67,9 +67,9 @@ export default {
   },
   generate: {
     routes () {
-      return axios.get('https://v2-api.sheety.co/612035a23ef10236acde20367e8a78e8/ghfr/feuille1')
+      return axios.get('https://api.sheety.co/8c471a8f63745133ae67fc6920e353c5/ghfrLandingPage/sheet1')
         .then((res) => {
-          return res.data.feuille1.map((row) => {
+          return res.data.sheet1.map((row) => {
             return '/' + row.id
           })
         })
